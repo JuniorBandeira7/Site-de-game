@@ -24,7 +24,7 @@ body{
     width: 100%;
     height: 50%;
 }
-#main-header-logo-container, #main-header-nav-ul a{
+#main-header-logo-container, #main-header-nav-ul a, #header-a-listas{
     color: #ffffff;
 }
 #main-header-logo-container{
@@ -51,6 +51,20 @@ body{
     gap: 10px;
     list-style: none;
 }
-#main-header-nav-ul a{
+#main-header-nav-ul a, #header-a-listas{
     font-size: 25px;
+    z-index: 9999999999999;
+}
+#div{
+    height: 75px;
+    background: #111111;
+    position: absolute;
+    width: 270px;
+    margin-top: 0px;
+    display: none;
+}
+ul li:hover #div{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
