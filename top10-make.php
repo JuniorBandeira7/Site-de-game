@@ -44,10 +44,12 @@ try {
         </div>
     </header>
     <section>
-        <aside id="propaganda"></aside>
+        <aside id="aside-esquerdo"></aside>
         <main>
-            <input type="text" name="titulo" id="titulo" placeholder="Título" style="margin-bottom: 30px; margin-top: 20px; width: 500px; height: 20px;" class="textos">
-            <textarea name="comentario" id="" cols="30" rows="10" class="textos"></textarea>
+            <form action="" method="post">
+                <input type="text" name="titulo" id="titulo" placeholder="Título" style="margin-bottom: 30px; margin-top: 20px; width: 500px; height: 20px;" class="textos">
+                <textarea name="comentario" id="" cols="30" rows="10" class="textos"></textarea>
+            </form>
             <ol>
                 <li class="posiçoes" id="posiçao0">
                     <img alt="" class="img-posiçoes" id="imagem0">
@@ -69,7 +71,7 @@ try {
                                 ?>
                             </select>
                         </form>
-                        <textarea name="comentario-jogo" id="comentario1" cols="100" rows="5" class="textos"></textarea>
+                        <textarea name="comentario-jogo" id="comentario1" cols="100" rows="10" class="textos"></textarea>
                     </div>
                 </li>
                 <li class="posiçoes" id="posiçao1">
@@ -92,7 +94,7 @@ try {
                                 ?>
                             </select>
                         </form>
-                        <textarea name="comentario-jogo" id="comentario1" cols="100" rows="5" class="textos"></textarea>
+                        <textarea name="comentario-jogo" id="comentario1" cols="100" rows="10" class="textos"></textarea>
                     </div>
                 </li>
                 <li class="posiçoes" id="posiçao2">
@@ -115,7 +117,7 @@ try {
                                 ?>
                             </select>
                         </form>
-                        <textarea name="comentario-jogo" id="comentario1" cols="100" rows="5" class="textos"></textarea>
+                        <textarea name="comentario-jogo" id="comentario1" cols="100" rows="10" class="textos"></textarea>
                     </div>
                 </li>
                 <li class="posiçoes" id="posiçao3">
@@ -138,7 +140,7 @@ try {
                                 ?>
                             </select>
                         </form>
-                        <textarea name="comentario-jogo" id="comentario1" cols="100" rows="5" class="textos"></textarea>
+                        <textarea name="comentario-jogo" id="comentario1" cols="100" rows="10" class="textos"></textarea>
                     </div>
                 </li>
                 <li class="posiçoes" id="posiçao4">
@@ -161,7 +163,7 @@ try {
                                 ?>
                             </select>
                         </form>
-                        <textarea name="comentario-jogo" id="comentario1" cols="100" rows="5" class="textos"></textarea>
+                        <textarea name="comentario-jogo" id="comentario1" cols="100" rows="10" class="textos"></textarea>
                     </div>
                 </li>
                 <li class="posiçoes" id="posiçao5">
@@ -184,7 +186,7 @@ try {
                                 ?>
                             </select>
                         </form>
-                        <textarea name="comentario-jogo" id="comentario1" cols="100" rows="5" class="textos"></textarea>
+                        <textarea name="comentario-jogo" id="comentario1" cols="100" rows="10" class="textos"></textarea>
                     </div>
                 </li>
                 <li class="posiçoes" id="posiçao6">
@@ -207,7 +209,7 @@ try {
                                 ?>
                             </select>
                         </form>
-                        <textarea name="comentario-jogo" id="comentario1" cols="100" rows="5" class="textos"></textarea>
+                        <textarea name="comentario-jogo" id="comentario1" cols="100" rows="10" class="textos"></textarea>
                     </div>
                 </li>
                 <li class="posiçoes" id="posiçao7">
@@ -230,7 +232,7 @@ try {
                                 ?>
                             </select>
                         </form>
-                        <textarea name="comentario-jogo" id="comentario1" cols="100" rows="5" class="textos"></textarea>
+                        <textarea name="comentario-jogo" id="comentario1" cols="100" rows="10" class="textos"></textarea>
                     </div>
                 </li>
                 <li class="posiçoes" id="posiçao8">
@@ -253,7 +255,7 @@ try {
                                 ?>
                             </select>
                         </form>
-                        <textarea name="comentario-jogo" id="comentario1" cols="100" rows="5" class="textos"></textarea>
+                        <textarea name="comentario-jogo" id="comentario1" cols="100" rows="10" class="textos"></textarea>
                     </div>
                 </li>
                 <li class="posiçoes" id="posiçao9">
@@ -276,13 +278,18 @@ try {
                                 ?>
                             </select>
                         </form>
-                        <textarea name="comentario-jogo" id="comentario1" cols="100" rows="5" class="textos"></textarea>
+                        <textarea name="comentario-jogo" id="comentario1" cols="100" rows="10" class="textos"></textarea>
                     </div>
                 </li>
             </ol>
         </main>
-        <aside id="ainda-nada"></aside>
+        <aside id="aside-direito">
+            <div id="enviar-box">
+                <input type="submit" value="Salvar e enviar">
+            </div>
+        </aside>
     </section>
+
 </body>
 
 </html>
