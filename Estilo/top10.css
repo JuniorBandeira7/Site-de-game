@@ -48,20 +48,3 @@ aside{
     flex-direction: column;
     align-items: center;
 }
-#enviar-box{
-    width: 80%;
-    background: #520303;
-    display: flex;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-    height: 150px;
-    margin-top: 400px;
-}
-#enviar-box input{
-    background: black;
-    color: red;
-    width: 80%;
-    height: 40%;
-    font-size: 22px;
-}

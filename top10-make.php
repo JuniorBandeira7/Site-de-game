@@ -22,9 +22,11 @@ try {
 <body>
     <header id="main-header">
         <div id="main-header-logo-container">
-            <div id="logo-container">
-                <h1 id="logo">Logo</h1>
-            </div>
+        <h1 id="logo">Logo</h1>
+                <h1 id="menu-usuario">
+                    <img id="avatar" src="" alt="">
+                    <a id="notific" href=""></a>
+                </h1>  
         </div>
         <div id="main-header-nav-container">
             <nav id="main-header-nav">
@@ -46,39 +48,37 @@ try {
     <section>
         <aside id="aside-esquerdo"></aside>
         <main>
-            <form action="" method="post">
+            <form action="insertListas.php" method="post" id="form-titulo">
                 <input type="text" name="titulo" id="titulo" placeholder="Título" style="margin-bottom: 30px; margin-top: 20px; width: 500px; height: 20px;" class="textos">
-                <textarea name="comentario" id="" cols="30" rows="10" class="textos"></textarea>
-            </form>
-            <ol>
-                <li class="posiçoes" id="posiçao0">
-                    <img alt="" class="img-posiçoes" id="imagem0">
-                    <div class="text-container-posiçoes">
-                        <form method="post" action="">
-                            <select name="jogos" class="textos" class="select-jogos" onchange="troca0()" id="select-jogos0">
-                                <option value="0"></option>
-                                <?php
-                                $stmt = $conn->prepare("SELECT * FROM jogos ORDER BY nome ASC");
-                                $stmt->execute();
-
-                                if ($stmt->rowCount() > 0) {
-                                    while ($dados = $stmt->fetch(PDO::FETCH_ASSOC)) {
-                                        echo "<option value='{$dados['id']}'>{$dados['nome']}</option>";
+                    <textarea name="resumo" id="resumo" cols="30" rows="10" class="textos"></textarea>
+                <div id="enviar-box" action="insertListas.php" method="post">
+                    <input type="submit" value="Salvar e enviar" id="enviar-boxx" >
+                </div>
+                <ol>
+                    <li class="posiçoes" id="posiçao0">
+                        <img alt="" class="img-posiçoes" id="imagem0">
+                        <div class="text-container-posiçoes">
+                                <select name="jogos0" class="textos" class="select-jogos" onchange="troca0()" id="select-jogos0">
+                                    <option value="0"></option>
+                                    <?php
+                                    $stmt = $conn->prepare("SELECT * FROM jogos ORDER BY nome ASC");
+                                    $stmt->execute();
+                                    if ($stmt->rowCount() > 0) {
+                                        while ($dados = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                                            echo "<option value='{$dados['id']}'>{$dados['nome']}</option>";
+                                        }
+                                    } else {
+                                        echo "erro";
                                     }
-                                } else {
-                                    echo "erro";
-                                }
-                                ?>
-                            </select>
-                        </form>
-                        <textarea name="comentario-jogo" id="comentario1" cols="100" rows="10" class="textos"></textarea>
-                    </div>
-                </li>
-                <li class="posiçoes" id="posiçao1">
+                                    ?>
+                                </select>
+                                <textarea name="comentario-jogo0" id="comentario1" cols="100" rows="10" class="textos"></textarea>
+                                </div>
+                    </li>
+                    <li class="posiçoes" id="posiçao1">
                     <img alt="" class="img-posiçoes" id="imagem1">
                     <div class="text-container-posiçoes">
-                        <form method="post" action="">
-                            <select name="jogos" class="textos" class="select-jogos" onchange="troca1()" id="select-jogos1">
+                            <select name="jogos1" class="textos" class="select-jogos" onchange="troca1()" id="select-jogos1">
                                 <option value="0"></option>
                                 <?php
                                 $stmt = $conn->prepare("SELECT * FROM jogos ORDER BY nome ASC");
@@ -93,15 +93,13 @@ try {
                                 }
                                 ?>
                             </select>
-                        </form>
-                        <textarea name="comentario-jogo" id="comentario1" cols="100" rows="10" class="textos"></textarea>
+                            <textarea name="comentario-jogo1" id="comentario1" cols="100" rows="10" class="textos"></textarea>
                     </div>
-                </li>
+                </li> 
                 <li class="posiçoes" id="posiçao2">
                     <img alt="" class="img-posiçoes" id="imagem2">
                     <div class="text-container-posiçoes">
-                        <form method="post" action="">
-                            <select name="jogos" class="textos" class="select-jogos" onchange="troca2()" id="select-jogos2">
+                            <select name="jogos2" class="textos" class="select-jogos" onchange="troca2()" id="select-jogos2">
                                 <option value="0"></option>
                                 <?php
                                 $stmt = $conn->prepare("SELECT * FROM jogos ORDER BY nome ASC");
@@ -116,15 +114,13 @@ try {
                                 }
                                 ?>
                             </select>
-                        </form>
-                        <textarea name="comentario-jogo" id="comentario1" cols="100" rows="10" class="textos"></textarea>
+                            <textarea name="comentario-jogo2" id="comentario1" cols="100" rows="10" class="textos"></textarea>
                     </div>
                 </li>
                 <li class="posiçoes" id="posiçao3">
                     <img alt="" class="img-posiçoes" id="imagem3">
                     <div class="text-container-posiçoes">
-                        <form method="post" action="">
-                            <select name="jogos" class="textos" class="select-jogos" onchange="troca3()" id="select-jogos3">
+                            <select name="jogos3" class="textos" class="select-jogos" onchange="troca3()" id="select-jogos3">
                                 <option value="0"></option>
                                 <?php
                                 $stmt = $conn->prepare("SELECT * FROM jogos ORDER BY nome ASC");
@@ -139,15 +135,13 @@ try {
                                 }
                                 ?>
                             </select>
-                        </form>
-                        <textarea name="comentario-jogo" id="comentario1" cols="100" rows="10" class="textos"></textarea>
+                            <textarea name="comentario-jogo3" id="comentario1" cols="100" rows="10" class="textos"></textarea>  
                     </div>
                 </li>
                 <li class="posiçoes" id="posiçao4">
                     <img alt="" class="img-posiçoes" id="imagem4">
                     <div class="text-container-posiçoes">
-                        <form method="post" action="">
-                            <select name="jogos" class="textos" class="select-jogos" onchange="troca4()" id="select-jogos4">
+                            <select name="jogos4" class="textos" class="select-jogos" onchange="troca4()" id="select-jogos4">
                                 <option value="0"></option>
                                 <?php
                                 $stmt = $conn->prepare("SELECT * FROM jogos ORDER BY nome ASC");
@@ -162,15 +156,13 @@ try {
                                 }
                                 ?>
                             </select>
-                        </form>
-                        <textarea name="comentario-jogo" id="comentario1" cols="100" rows="10" class="textos"></textarea>
+                            <textarea name="comentario-jogo4" id="comentario1" cols="100" rows="10" class="textos"></textarea>  
                     </div>
                 </li>
                 <li class="posiçoes" id="posiçao5">
                     <img alt="" class="img-posiçoes" id="imagem5">
                     <div class="text-container-posiçoes">
-                        <form method="post" action="">
-                            <select name="jogos" class="textos" class="select-jogos" onchange="troca5()" id="select-jogos5">
+                            <select name="jogos5" class="textos" class="select-jogos" onchange="troca5()" id="select-jogos5">
                                 <option value="0"></option>
                                 <?php
                                 $stmt = $conn->prepare("SELECT * FROM jogos ORDER BY nome ASC");
@@ -185,15 +177,13 @@ try {
                                 }
                                 ?>
                             </select>
-                        </form>
-                        <textarea name="comentario-jogo" id="comentario1" cols="100" rows="10" class="textos"></textarea>
+                            <textarea name="comentario-jogo5" id="comentario1" cols="100" rows="10" class="textos"></textarea>
                     </div>
                 </li>
                 <li class="posiçoes" id="posiçao6">
                     <img alt="" class="img-posiçoes" id="imagem6">
                     <div class="text-container-posiçoes">
-                        <form method="post" action="">
-                            <select name="jogos" class="textos" class="select-jogos" onchange="troca6()" id="select-jogos6">
+                            <select name="jogos6" class="textos" class="select-jogos" onchange="troca6()" id="select-jogos6">
                                 <option value="0"></option>
                                 <?php
                                 $stmt = $conn->prepare("SELECT * FROM jogos ORDER BY nome ASC");
@@ -208,15 +198,13 @@ try {
                                 }
                                 ?>
                             </select>
-                        </form>
-                        <textarea name="comentario-jogo" id="comentario1" cols="100" rows="10" class="textos"></textarea>
+                            <textarea name="comentario-jogo6" id="comentario1" cols="100" rows="10" class="textos"></textarea>   
                     </div>
                 </li>
                 <li class="posiçoes" id="posiçao7">
                     <img alt="" class="img-posiçoes" id="imagem7">
                     <div class="text-container-posiçoes">
-                        <form method="post" action="">
-                            <select name="jogos" class="textos" class="select-jogos" onchange="troca7()" id="select-jogos7">
+                            <select name="jogos7" class="textos" class="select-jogos" onchange="troca7()" id="select-jogos7">
                                 <option value="0"></option>
                                 <?php
                                 $stmt = $conn->prepare("SELECT * FROM jogos ORDER BY nome ASC");
@@ -231,15 +219,13 @@ try {
                                 }
                                 ?>
                             </select>
-                        </form>
-                        <textarea name="comentario-jogo" id="comentario1" cols="100" rows="10" class="textos"></textarea>
+                            <textarea name="comentario-jogo7" id="comentario1" cols="100" rows="10" class="textos"></textarea>
                     </div>
                 </li>
                 <li class="posiçoes" id="posiçao8">
                     <img alt="" class="img-posiçoes" id="imagem8">
                     <div class="text-container-posiçoes">
-                        <form method="post" action="">
-                            <select name="jogos" class="textos" class="select-jogos" onchange="troca8()" id="select-jogos8">
+                            <select name="jogos8" class="textos" class="select-jogos" onchange="troca8()" id="select-jogos8">
                                 <option value="0"></option>
                                 <?php
                                 $stmt = $conn->prepare("SELECT * FROM jogos ORDER BY nome ASC");
@@ -254,15 +240,13 @@ try {
                                 }
                                 ?>
                             </select>
-                        </form>
-                        <textarea name="comentario-jogo" id="comentario1" cols="100" rows="10" class="textos"></textarea>
+                            <textarea name="comentario-jogo8" id="comentario1" cols="100" rows="10" class="textos"></textarea>
                     </div>
                 </li>
                 <li class="posiçoes" id="posiçao9">
                     <img alt="" class="img-posiçoes" id="imagem9">
                     <div class="text-container-posiçoes">
-                        <form method="post" action="">
-                            <select name="jogos" class="textos" class="select-jogos" onchange="troca9()" id="select-jogos9">
+                            <select name="jogos9" class="textos" class="select-jogos" onchange="troca9()" id="select-jogos9">
                                 <option value="0"></option>
                                 <?php
                                 $stmt = $conn->prepare("SELECT * FROM jogos ORDER BY nome ASC");
@@ -277,25 +261,24 @@ try {
                                 }
                                 ?>
                             </select>
-                        </form>
-                        <textarea name="comentario-jogo" id="comentario1" cols="100" rows="10" class="textos"></textarea>
+                            <textarea name="comentario-jogo9" id="comentario1" cols="100" rows="10" class="textos"></textarea>
                     </div>
                 </li>
-            </ol>
+                </ol> 
+            </form>
         </main>
-        <aside id="aside-direito">
-            <div id="enviar-box">
-                <input type="submit" value="Salvar e enviar">
-            </div>
+        <aside id="aside-direito">   
         </aside>
     </section>
 
 </body>
 
 </html>
+<script>
+</script>
 <script src="ckeditor/ckeditor.js"></script>
 <script>
-    CKEDITOR.replace('comentario')
+    CKEDITOR.replace('resumo')
 </script>
 <script src="script/lista.js"></script>
 

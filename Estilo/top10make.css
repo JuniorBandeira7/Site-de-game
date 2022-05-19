@@ -6,3 +6,21 @@
 #cke_1_top{
     background: #160000;
 }
+#enviar-box{
+    margin-top: 50px;
+    margin-bottom: 40px;
+    width: 100%;
+    background: #520303;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    height: 150px;
+}
+#enviar-box input{
+    background: black;
+    color: red;
+    width: 80%;
+    height: 40%;
+    font-size: 22px;
+}
