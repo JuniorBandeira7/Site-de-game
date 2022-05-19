@@ -1,0 +1,46 @@
+section{
+    display: flex;
+}
+aside{
+    width: 25%;
+}
+label{
+    color: #ffffff;
+    font-size: 20px;
+}
+input{
+    font-size: 20px;
+}
+main {
+    width: 50%;
+    display: flex;
+    height: calc(100vh - 150px);
+    align-items: center;
+    justify-content: center;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-bottom: 300px;
+}
+form p{
+    display: table;
+    margin-bottom: 20px;
+}
+form label {
+    display: table-cell;
+    width: 140px;
+    padding-right: 20px;
+    text-align: right;
+    vertical-align: top;
+}
+#enviar{
+    height: 50px;
+    border-radius: 5px;
+    background: #ff0000;
+    border: none;
+    font-weight: bold;
+    margin-top: 50px;
+    cursor: pointer;
+}

@@ -21,12 +21,19 @@ try {
 
 <body>
     <header id="main-header">
-        <div id="main-header-logo-container">
-        <h1 id="logo">Logo</h1>
-                <h1 id="menu-usuario">
-                    <img id="avatar" src="" alt="">
-                    <a id="notific" href=""></a>
-                </h1>  
+    <div id="main-header-logo-container">
+                <h1 id="logo">Logo</h1>
+                <ul id="menu-usuario">
+                    <li>
+                        <img id="avatar" src="" alt="">
+                        <ul id="avatar-drop">
+                            <li><a href="">Configurações</a></li>
+                            <li><a href="">Minhas listas</a></li>
+                            <li><a href="">Sair</a></li>
+                        </ul>
+                    </li>
+                    <a id="notific" href=""><img src="Estilo/Icones/bell-ring.png" alt=""></a>
+                </ul>  
         </div>
         <div id="main-header-nav-container">
             <nav id="main-header-nav">
