@@ -3,6 +3,9 @@
 include("Configuração/config.php");
 include(DIRREQ."biblioteca/vendor/autoload.php");
 
+use Traits\TraitParseUrl;
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

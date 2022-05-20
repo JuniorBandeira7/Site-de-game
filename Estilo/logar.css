@@ -1,0 +1,94 @@
+body{
+    font-size: 15pt !important;
+    background-size: cover;
+    background-position: center;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    width: 100% !important;
+    height: 100vh !important;
+    justify-content: center;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    width: 50%;
+    height: 70vh;
+    background: #0400ff12;
+    border-radius: 20px;
+    box-shadow: -1px 1px 15px, 10px 10px 10px;
+}
+#logo-loguin{
+    color: #ff0000;
+    margin-bottom: 150px;
+    font-size: 30px;
+  }
+  #escrever{
+    margin-bottom: 40px;
+    font-size: 20px;
+    width: 50%;
+    background: none;
+    color: white;
+    border: none;
+    border-bottom: 1px solid;
+    outline: 0;
+    transition: 1s;
+  }
+  #escrever:focus{
+    font-size: 25px;
+    transition: 1s;
+  }
+  label{
+    color: rgb(212, 212, 247);
+  }
+  #botao{
+    width: 25%;
+    height: 40px;
+    border-radius: 15px;
+    opacity: 80%;
+    color: #fafafa;
+    margin-left: 10px;
+    border: #c7d3f71f solid;
+    background:#ffffff00;
+    cursor: pointer;
+  }
+  div{
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    align-items: center;
+    width: 100%
+  }
+  #divbotao{
+    display: flex;
+    flex-direction: row;
+  }
+  a{
+    color: white;
+    text-decoration: none;
+    margin-top: 30px;
+  }
+  @media(max-width: 1024px){
+    main{
+      width: 90%;
+    }
+    #escrever{
+      font-size: 16px;
+      transition: 1s;
+      width: 70%
+    }
+    #escrever:focus{
+      font-size: 25px;
+      transition: 1s;
+      width: 90%;
+    }
+    #section-div{
+        margin-bottom: 10%;
+    }
+    #logo-loguin{
+        margin-bottom: 10%;
+    }
+  }
