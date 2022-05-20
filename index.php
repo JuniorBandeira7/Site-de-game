@@ -27,7 +27,7 @@
         <div id="main-header-nav-container">
             <nav id="main-header-nav">
                 <ul id="main-header-nav-ul">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.php">Home</a></li>
                     <li>
                         <p href="" id="header-a-listas">Listas</p>
                         <ul id="div">

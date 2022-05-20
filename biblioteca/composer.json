@@ -1,0 +1,19 @@
+{
+    "name": "game/game",
+    "description": "game de site",
+    "authors": [
+        {
+            "name": "Julio Bandeira",
+            "email": "juliobandeira77@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Classes\\":"./classes/",
+            "Models\\":"./models/",
+            "Traits\\":"./traits/"
+
+        }
+    }
+}
