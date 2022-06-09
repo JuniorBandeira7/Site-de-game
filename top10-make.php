@@ -1,10 +1,5 @@
 <?php
-try {
-    $conn = new PDO("mysql:host=localhost;dbname=gamelistdb", "root", "");
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (PDOException $e) {
-    echo 'ERROR: ' . $e->getMessage();
-}
+include("classes/conexao.php");
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -42,7 +37,7 @@ try {
                     <li>
                         <p href="" id="header-a-listas">Listas</p>
                         <ul id="div">
-                            <li><a href="top10.html">Lista dos usuários</a></li>
+                            <li><a href="top10.php">Lista dos usuários</a></li>
                             <li><a href="top10-make.php">Criar lista</a></li>
                         </ul>
                     </li>
@@ -68,15 +63,7 @@ try {
                                 <select name="jogos0" class="textos" class="select-jogos" onchange="troca0()" id="select-jogos0">
                                     <option value="0"></option>
                                     <?php
-                                    $stmt = $conn->prepare("SELECT * FROM jogos ORDER BY nome ASC");
-                                    $stmt->execute();
-                                    if ($stmt->rowCount() > 0) {
-                                        while ($dados = $stmt->fetch(PDO::FETCH_ASSOC)) {
-                                            echo "<option value='{$dados['id']}'>{$dados['nome']}</option>";
-                                        }
-                                    } else {
-                                        echo "erro";
-                                    }
+                                    include("classes/acharFoto.php")
                                     ?>
                                 </select>
                                 <textarea name="comentario-jogo0" id="comentario1" cols="100" rows="10" class="textos"></textarea>
@@ -88,16 +75,7 @@ try {
                             <select name="jogos1" class="textos" class="select-jogos" onchange="troca1()" id="select-jogos1">
                                 <option value="0"></option>
                                 <?php
-                                $stmt = $conn->prepare("SELECT * FROM jogos ORDER BY nome ASC");
-                                $stmt->execute();
-
-                                if ($stmt->rowCount() > 0) {
-                                    while ($dados = $stmt->fetch(PDO::FETCH_ASSOC)) {
-                                        echo "<option value='{$dados['id']}'>{$dados['nome']}</option>";
-                                    }
-                                } else {
-                                    echo "erro";
-                                }
+                                    include("classes/acharFoto.php")
                                 ?>
                             </select>
                             <textarea name="comentario-jogo1" id="comentario1" cols="100" rows="10" class="textos"></textarea>
@@ -109,16 +87,7 @@ try {
                             <select name="jogos2" class="textos" class="select-jogos" onchange="troca2()" id="select-jogos2">
                                 <option value="0"></option>
                                 <?php
-                                $stmt = $conn->prepare("SELECT * FROM jogos ORDER BY nome ASC");
-                                $stmt->execute();
-
-                                if ($stmt->rowCount() > 0) {
-                                    while ($dados = $stmt->fetch(PDO::FETCH_ASSOC)) {
-                                        echo "<option value='{$dados['id']}'>{$dados['nome']}</option>";
-                                    }
-                                } else {
-                                    echo "erro";
-                                }
+                                    include("classes/acharFoto.php")
                                 ?>
                             </select>
                             <textarea name="comentario-jogo2" id="comentario1" cols="100" rows="10" class="textos"></textarea>
@@ -130,16 +99,7 @@ try {
                             <select name="jogos3" class="textos" class="select-jogos" onchange="troca3()" id="select-jogos3">
                                 <option value="0"></option>
                                 <?php
-                                $stmt = $conn->prepare("SELECT * FROM jogos ORDER BY nome ASC");
-                                $stmt->execute();
-
-                                if ($stmt->rowCount() > 0) {
-                                    while ($dados = $stmt->fetch(PDO::FETCH_ASSOC)) {
-                                        echo "<option value='{$dados['id']}'>{$dados['nome']}</option>";
-                                    }
-                                } else {
-                                    echo "erro";
-                                }
+                                    include("classes/acharFoto.php")
                                 ?>
                             </select>
                             <textarea name="comentario-jogo3" id="comentario1" cols="100" rows="10" class="textos"></textarea>  
@@ -151,16 +111,7 @@ try {
                             <select name="jogos4" class="textos" class="select-jogos" onchange="troca4()" id="select-jogos4">
                                 <option value="0"></option>
                                 <?php
-                                $stmt = $conn->prepare("SELECT * FROM jogos ORDER BY nome ASC");
-                                $stmt->execute();
-
-                                if ($stmt->rowCount() > 0) {
-                                    while ($dados = $stmt->fetch(PDO::FETCH_ASSOC)) {
-                                        echo "<option value='{$dados['id']}'>{$dados['nome']}</option>";
-                                    }
-                                } else {
-                                    echo "erro";
-                                }
+                                    include("classes/acharFoto.php")
                                 ?>
                             </select>
                             <textarea name="comentario-jogo4" id="comentario1" cols="100" rows="10" class="textos"></textarea>  
@@ -172,16 +123,7 @@ try {
                             <select name="jogos5" class="textos" class="select-jogos" onchange="troca5()" id="select-jogos5">
                                 <option value="0"></option>
                                 <?php
-                                $stmt = $conn->prepare("SELECT * FROM jogos ORDER BY nome ASC");
-                                $stmt->execute();
-
-                                if ($stmt->rowCount() > 0) {
-                                    while ($dados = $stmt->fetch(PDO::FETCH_ASSOC)) {
-                                        echo "<option value='{$dados['id']}'>{$dados['nome']}</option>";
-                                    }
-                                } else {
-                                    echo "erro";
-                                }
+                                    include("classes/acharFoto.php")
                                 ?>
                             </select>
                             <textarea name="comentario-jogo5" id="comentario1" cols="100" rows="10" class="textos"></textarea>
@@ -193,16 +135,7 @@ try {
                             <select name="jogos6" class="textos" class="select-jogos" onchange="troca6()" id="select-jogos6">
                                 <option value="0"></option>
                                 <?php
-                                $stmt = $conn->prepare("SELECT * FROM jogos ORDER BY nome ASC");
-                                $stmt->execute();
-
-                                if ($stmt->rowCount() > 0) {
-                                    while ($dados = $stmt->fetch(PDO::FETCH_ASSOC)) {
-                                        echo "<option value='{$dados['id']}'>{$dados['nome']}</option>";
-                                    }
-                                } else {
-                                    echo "erro";
-                                }
+                                    include("classes/acharFoto.php")
                                 ?>
                             </select>
                             <textarea name="comentario-jogo6" id="comentario1" cols="100" rows="10" class="textos"></textarea>   
@@ -214,16 +147,7 @@ try {
                             <select name="jogos7" class="textos" class="select-jogos" onchange="troca7()" id="select-jogos7">
                                 <option value="0"></option>
                                 <?php
-                                $stmt = $conn->prepare("SELECT * FROM jogos ORDER BY nome ASC");
-                                $stmt->execute();
-
-                                if ($stmt->rowCount() > 0) {
-                                    while ($dados = $stmt->fetch(PDO::FETCH_ASSOC)) {
-                                        echo "<option value='{$dados['id']}'>{$dados['nome']}</option>";
-                                    }
-                                } else {
-                                    echo "erro";
-                                }
+                                    include("classes/acharFoto.php")
                                 ?>
                             </select>
                             <textarea name="comentario-jogo7" id="comentario1" cols="100" rows="10" class="textos"></textarea>
@@ -235,16 +159,7 @@ try {
                             <select name="jogos8" class="textos" class="select-jogos" onchange="troca8()" id="select-jogos8">
                                 <option value="0"></option>
                                 <?php
-                                $stmt = $conn->prepare("SELECT * FROM jogos ORDER BY nome ASC");
-                                $stmt->execute();
-
-                                if ($stmt->rowCount() > 0) {
-                                    while ($dados = $stmt->fetch(PDO::FETCH_ASSOC)) {
-                                        echo "<option value='{$dados['id']}'>{$dados['nome']}</option>";
-                                    }
-                                } else {
-                                    echo "erro";
-                                }
+                                    include("classes/acharFoto.php")
                                 ?>
                             </select>
                             <textarea name="comentario-jogo8" id="comentario1" cols="100" rows="10" class="textos"></textarea>
@@ -256,16 +171,7 @@ try {
                             <select name="jogos9" class="textos" class="select-jogos" onchange="troca9()" id="select-jogos9">
                                 <option value="0"></option>
                                 <?php
-                                $stmt = $conn->prepare("SELECT * FROM jogos ORDER BY nome ASC");
-                                $stmt->execute();
-
-                                if ($stmt->rowCount() > 0) {
-                                    while ($dados = $stmt->fetch(PDO::FETCH_ASSOC)) {
-                                        echo "<option value='{$dados['id']}'>{$dados['nome']}</option>";
-                                    }
-                                } else {
-                                    echo "erro";
-                                }
+                                    include("classes/acharFoto.php")
                                 ?>
                             </select>
                             <textarea name="comentario-jogo9" id="comentario1" cols="100" rows="10" class="textos"></textarea>

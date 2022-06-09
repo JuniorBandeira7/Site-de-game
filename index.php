@@ -1,3 +1,12 @@
+<?php
+
+include("Configuração/config.php");
+include(DIRREQ."biblioteca/vendor/autoload.php");
+
+use Traits\TraitParseUrl;
+
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -31,7 +40,7 @@
                     <li>
                         <p href="" id="header-a-listas">Listas</p>
                         <ul id="div">
-                            <li><a href="top10.html">Lista dos usuários</a></li>
+                            <li><a href="top10.php">Lista dos usuários</a></li>
                             <li><a href="top10-make.php">Criar lista</a></li>
                         </ul>
                     </li>

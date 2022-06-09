@@ -1,6 +1,6 @@
 RewriteEngine On
 Options All -Indexes
 
-DirectoryIndex Cadastro.php
+DirectoryIndex index.php
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(.*)$ /Cadastro.php?url=$1 [QSA,L]
+RewriteRule ^(.*)$ /index.php?url=$1 [QSA,L]

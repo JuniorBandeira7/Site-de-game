@@ -1,11 +1,5 @@
 <?php
-
-include("Configuração/config.php");
-include(DIRREQ."biblioteca/vendor/autoload.php");
-
-use Traits\TraitParseUrl;
-
-
+include("classes/conexao.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -40,7 +34,7 @@ use Traits\TraitParseUrl;
                     <li>
                         <p href="" id="header-a-listas">Listas</p>
                         <ul id="div">
-                            <li><a href="top10.html">Lista dos usuários</a></li>
+                            <li><a href="top10.php">Lista dos usuários</a></li>
                             <li><a href="top10-make.php">Criar lista</a></li>
                         </ul>
                     </li>
@@ -56,25 +50,25 @@ use Traits\TraitParseUrl;
             <form action="">
                 <p>
                     <label for="nome">Nome:</label>
-                    <input type="text" name="nome">
+                    <input type="text" name="nome" required>
                 </p>
 
                 <p>
                     <label for="email">Email:</label>
-                    <input type="email" name="email">
+                    <input type="email" name="email" required>
                 </p>
 
                 <p>
                     <label for="senha">Senha:</label>
-                    <input type="password" name="senha" id="">
+                    <input type="password" name="senha" id="" required>
                 </p>
 
                 <p>
                     <label for="rsenha">Repita a senha:</label>
-                    <input type="password" name="rsenha" id="">
+                    <input type="password" name="rsenha" id="" required>
                 </p>
 
-                <input type="submit" value="Cadastrar" id="enviar">
+                <input type="submit" value="Cadastrar" id="enviar" required>
             </form>
         </main>
         <aside></aside>

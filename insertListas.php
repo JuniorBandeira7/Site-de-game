@@ -1,7 +1,5 @@
 <?php
-
-     $con=mysqli_connect("localhost","root","");
-     mysqli_select_db($con,"gamelistdb");
+include("classes/conmsqli.php");
 
 
 $titulo=$_POST["titulo"];
