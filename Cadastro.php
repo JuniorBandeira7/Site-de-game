@@ -47,7 +47,7 @@ include("classes/conexao.php");
     <section>
         <aside></aside>
         <main>
-            <form action="">
+            <form action="insertCadastro.php" method="post">
                 <p>
                     <label for="nome">Nome:</label>
                     <input type="text" name="nome" required>
@@ -68,7 +68,7 @@ include("classes/conexao.php");
                     <input type="password" name="rsenha" id="" required>
                 </p>
 
-                <input type="submit" value="Cadastrar" id="enviar" required>
+                <input type="submit" value="Cadastrar" id="enviar">
             </form>
         </main>
         <aside></aside>
