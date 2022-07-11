@@ -60,12 +60,12 @@ include("classes/conexao.php");
 
                 <p>
                     <label for="senha">Senha:</label>
-                    <input type="password" name="senha" id="" required>
+                    <input type="password" name="senha" id="senha" required>
                 </p>
 
                 <p>
                     <label for="rsenha">Repita a senha:</label>
-                    <input type="password" name="rsenha" id="" required>
+                    <input type="password" name="rsenha" id="cSenha" required>
                 </p>
 
                 <input type="submit" value="Cadastrar" id="enviar">
@@ -74,4 +74,19 @@ include("classes/conexao.php");
         <aside></aside>
     </section>
 </body>
+<script>
+    password = document.getElementById("senha")
+    confirm_password = document.getElementById("cSenha");
+
+    function validatePassword(){
+        if(password.value != confirm_password.value) {
+            confirm_password.setCustomValidity("Senhas diferentes!");
+        } else {
+            confirm_password.setCustomValidity('');
+        }
+    }
+
+    password.onchange = validatePassword;
+    confirm_password.onkeyup = validatePassword;
+</script>
 </html>

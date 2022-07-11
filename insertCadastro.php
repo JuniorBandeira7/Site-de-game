@@ -17,7 +17,8 @@ if($conta==0){
     $cadastro=[
         'nome' => $nome,
         'email' => $email,
-        'senha' => $senha,
+        'senha' => password_hash($senha, PASSWORD_DEFAULT),
+         
     ];
 
     $stmt= $conn->prepare('INSERT INTO usuarios (nome, email, senha) VALUES(:nome, :email, :senha)');
@@ -43,12 +44,14 @@ if($conta==0){
     <title>Document</title>
 </head>
 <body>
-    <main>
-        <h1 style="color: white;">Email já cadastrado!</h1>
-        <div>
-            <a   id="botao" href="Cadastro.php" style="margin-top: 20px; display: flex; justify-content: center; align-items: center;">Voltar</a>
-        </div>
-    </main>
+    <div id="tudo">
+        <main>
+            <h1 style="color: white;">Email já cadastrado!</h1>
+            <div>
+                <a   id="botao" href="Cadastro.php" style="margin-top: 20px; display: flex; justify-content: center; align-items: center;">Voltar</a>
+            </div>
+        </main>
+    </div>
 </body>
 </html>
 <?php

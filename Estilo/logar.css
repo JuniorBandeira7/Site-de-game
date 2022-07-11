@@ -1,4 +1,8 @@
 body{
+  margin: 0;
+  padding: 0;
+}
+#tudo{
     font-size: 15pt !important;
     background-size: cover;
     background-position: center;
@@ -55,7 +59,7 @@ main{
     background:#ffffff00;
     cursor: pointer;
   }
-  div{
+  div, form{
     display: flex;
     justify-content: center;
     flex-flow: column;

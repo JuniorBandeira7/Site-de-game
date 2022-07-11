@@ -9,19 +9,21 @@
     <title>Document</title>
 </head>
 <body>
-    <main>
-        <a href="index.php" id="logo-loguin">LOGO</a>
-        <div id="section-div">
-            <label for="">Nome do usuário</label>
-            <input id="escrever" type="text" name="" id="" value="" />
-            <label for="">Senha</label>
-            <input id="escrever" type="password" name="" id="" value="" />
-            <div id="divbotao">
-                <input type="button" name="botao" id="botao" value="Entrar" />
-                <input type="button" name="botao" id="botao" value="Cadastrar" />
-            </div>
-            <a href="">Esqueci minha senha</a>
-        </div>
-    </main>
+    <div id="tudo">
+        <main>
+            <a href="index.php" id="logo-loguin">LOGO</a>
+            <form id="section-div">
+                <label for="">Nome do usuário</label>
+                <input id="escrever" type="text" name="" id="" value="" />
+                <label for="">Senha</label>
+                <input id="escrever" type="password" name="" id="" value="" />
+                <div id="divbotao">
+                    <input type="button" name="botao" id="botao" value="Entrar" />
+                    <input type="button" name="botao" id="botao" value="Cadastrar" />
+                </div>
+                <a href="">Esqueci minha senha</a>
+            </form>
+        </main>
+    </div>
 </body>
 </html>
