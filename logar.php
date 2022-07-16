@@ -12,13 +12,13 @@
     <div id="tudo">
         <main>
             <a href="index.php" id="logo-loguin">LOGO</a>
-            <form id="section-div">
-                <label for="">Nome do usuário</label>
-                <input id="escrever" type="text" name="" id="" value="" />
+            <form id="section-div" action="classes/loguin.php" method="post">
+                <label for="">Email</label>
+                <input id="escrever" type="email" name="email" id="" value="" />
                 <label for="">Senha</label>
-                <input id="escrever" type="password" name="" id="" value="" />
+                <input id="escrever" type="password" name="senha" id="" value="" />
                 <div id="divbotao">
-                    <input type="button" name="botao" id="botao" value="Entrar" />
+                    <input type="submit" name="botao" id="botao" value="Entrar" />
                     <input type="button" name="botao" id="botao" value="Cadastrar" />
                 </div>
                 <a href="">Esqueci minha senha</a>
